@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Tube</title>
+    <link rel="shortcut icon" href="86-PHero-tube/img/favicon.png" type="image/x-icon">
+    <!-- googleFont-link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Daisyui-link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome-link -->
+    <script src="https://kit.fontawesome.com/143ac30e83.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- header-start -->
+    <header class="px-5">
+        <div class="navbar bg-gray-100">
+            <div class="navbar-start">
+                <a class="btn btn-ghost normal-case text-xl" href="index.html"><img
+                        class="w-16 sm:w-28 md:w-full lg:w-full" src="86-PHero-tube/img/Logo.png" alt="" srcset=""></a>
+            </div>
+            <div class="navbar-center">
+                <a class="btn btn-sm btn-outline sm:btn-sm md:btn-md lg:btn-md hover:bg-red-600 hover:text-white"
+                    id="home" href="index.html">HOME</a>
+            </div>
+            <div class="navbar-end">
+                <a class="btn btn-sm btn-outline  sm:btn-sm md:btn-md lg:btn-md hover:bg-red-600 hover:text-white"" id="
+                    blog">Blog</a>
+            </div>
+        </div>
+    </header>
+    <hr class="border-2 border-gray-300 my-2">
+    <h1 class="text-4xl font-semibold text-center">About some JavaScript and API</h1>
+    <main>
+        <div class="bg-white m-5 p-5 rounded-md shadow-md">
+            <h3 class="text-center mb-2 text-xl font-semibold">
+                Scope of <kbd class="kbd kbd-sm md:kbd-md lg:kbd-md">var</kbd> <kbd
+                    class="kbd kbd-sm md:kbd-md lg:kbd-md">let</kbd>
+                and <kbd class="kbd kbd-sm md:kbd-md lg:kbd-md">const</kbd>
+            </h3>
+            <h6>The scope of var, let, and const in JavaScript determines where and how variables are accessible within
+                your code. Here's a brief explanation of their respective scopes:</h6>
+            <span class="font-semibold underline">var Scope:</span>
+            <ul class="list-disc mb-1">
+                <li>Variables declared with var are function-scoped. They are accessible throughout the entire function
+                    in which they are declared.</li>
+                <li>Variables declared with var are also hoisted to the top of their containing function or global
+                    scope, which means they are available for use throughout the entire scope, even before they are
+                    declared. However, their initial values are undefined.</li>
+                <li>If declared outside of a function, var variables are globally scoped, meaning they are accessible
+                    from anywhere in your JavaScript code.</li>
+            </ul>
+            <span class="font-semibold underline">let Scope:</span>
+            <ul class="list-disc mb-1">
+                <li>Variables declared with let are block-scoped. They are accessible within the nearest enclosing
+                    block, which can be a block of code inside a function, a loop, or an if statement.</li>
+                <li>Unlike var, let variables are not hoisted to the top of their containing block. They are only
+                    accessible after the point of declaration within the block.</li>
+                <li>If declared outside of a block (e.g., at the top level of a script or module), let variables have
+                    global scope.</li>
+            </ul>
+            <span class="font-semibold underline">const Scope:</span>
+            <ul class="list-disc mb-1">
+                <li>Variables declared with const are also block-scoped, just like let.</li>
+                <li>Similar to let, const variables are not hoisted to the top of their containing block.</li>
+                <li>const variables have an additional characteristic: they cannot be reassigned after they are
+                    initialized. However, the value they hold may still be mutable if it is an object or array, allowing
+                    you to modify the properties or elements within the object or array.</li>
+            </ul>
+
+            <div class="container mx-auto mt-8 text-xs md:text-lg">
+                <h1 class="text-2xl font-semibold mb-4 text-center">Scope Table</h1>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full table-auto">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="text-center">Keyword</th>
+                                <th class="text-center">Function Scope</th>
+                                <th class="text-center">Block Scope</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td class="py-2 text-center">var</td>
+                                <td class="py-2 text-center">Function scope</td>
+                                <td class="py-2 text-center">Function scope</td>
+                            </tr>
+
+                            <tr class="bg-gray-100">
+                                <td class="py-2 text-center">let</td>
+                                <td class="py-2 text-center">Block scope</td>
+                                <td class="py-2 text-center">Block scope</td>
+                            </tr>
+
+                            <tr>
+                                <td class="py-2 text-center">const</td>
+                                <td class="py-2 text-center">Block scope</td>
+                                <td class="py-2 text-center">Block scope</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white m-5 p-5 rounded-md shadow-md">
+            <h3 class="text-center mb-2 text-xl font-semibold"><kbd class="kbd kbd-sm md:kbd-md lg:kbd-md">null</kbd>
+                and <kbd class="kbd kbd-sm md:kbd-md lg:kbd-md">undefined</kbd> use cases</h3>
+            <h6 class="text-center">null and undefined are two distinct primitive values in JavaScript, and they have
+                different use cases:
+            </h6>
+            <p class="font-semibold">null:</p>
+            <ol class="list-decimal">
+                <li><span class="font-semibold underline">Explicit Absence of Value: </span>
+                    You can use null to explicitly indicate that a variable or object property intentionally has no
+                    value. It represents the absence of any object value.</li>
+                <li><span class="font-semibold underline">As a Placeholder: </span>
+                    In some cases, you might use null as a placeholder value for an object property or variable that
+                    will be assigned a meaningful value later in your code.</li>
+                <li><span class="font-semibold underline">Comparisons and Testing: </span>
+                    null is often used when checking or comparing values. For example, you might check if a variable is
+                    null to determine if a resource has been loaded or initialized.</li>
+            </ol>
+            <p class="font-semibold mt-3">undefined:</p>
+            <ol class="list-decimal">
+                <li><span class="font-semibold underline">Default Value: </span>
+                    In JavaScript, when a variable or object property is declared but not initialized, it has an
+                    undefined value by default.</li>
+                <li><span class="font-semibold underline">Function Return: </span>
+                    If a function doesn't explicitly return a value, it returns undefined by default.</li>
+                <li><span class="font-semibold underline">Parameter Value: </span>
+                    If a function is called with fewer arguments than declared parameters, the missing parameters have
+                    undefined values.</li>
+                <li><span class="font-semibold underline">Property Access: </span>
+                    If you try to access an object property that doesn't exist, you'll get undefined.</li>
+                <li><span class="font-semibold underline">Default Function Parameters: </span>
+                    You can use undefined as a default value for function parameters to check if an argument was
+                    provided when the function is called.</li>
+            </ol>
+        </div>
+        <div class="bg-white m-5 p-5 rounded-md shadow-md">
+            <h3 class="text-center mb-2 text-xl font-semibold">
+                REST API
+            </h3>
+            <p>A REST API (Representational State Transfer Application Programming Interface) is a standardized way of
+                designing web services that are scalable and accessible over the internet. It uses HTTP methods (GET,
+                POST, PUT, DELETE) to perform operations on resources, which are identified by URLs. Key principles
+                include statelessness, a uniform interface, and resource-based design. REST APIs are widely used for
+                data exchange in web and mobile applications.</p>
+        </div>
+    </main>
+    <footer class="bg-slate-200 text-center p-10">
+        <p><span class="font-bold text-4xl"><span class="text-red-500">PH</span> Tube</span></p>
+        <p class="mt-5">&copy; All Rights Reserved To <span class="font-bold"><span class="text-red-500">PH</span>
+                Tube</span> 2023
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
